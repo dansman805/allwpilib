@@ -15,7 +15,7 @@ import edu.wpi.first.wpilibj.PIDSourceType;
  *
  * @deprecated This class is no longer used.
  */
-@Deprecated(since = "2020", forRemoval = true)
+@Deprecated
 public abstract class Filter implements PIDSource {
   private final PIDSource m_source;
 

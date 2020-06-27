@@ -12,7 +12,7 @@ package edu.wpi.first.wpilibj;
  *
  * @deprecated Use DoubleSupplier and new PIDController class.
  */
-@Deprecated(since = "2020", forRemoval = true)
+@Deprecated
 public interface PIDSource {
   /**
    * Set which parameter of the device you are using as a process control variable.

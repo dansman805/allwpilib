@@ -29,7 +29,7 @@ import static edu.wpi.first.wpilibj.util.ErrorMessages.requireNonNullParam;
  *
  * @deprecated All APIs which use this have been deprecated.
  */
-@Deprecated(since = "2020", forRemoval = true)
+@Deprecated
 @SuppressWarnings("PMD.TooManyFields")
 public class PIDBase implements PIDInterface, PIDOutput, Sendable, AutoCloseable {
   public static final double kDefaultPeriod = 0.05;

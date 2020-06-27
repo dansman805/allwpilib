@@ -14,7 +14,7 @@ package edu.wpi.first.wpilibj;
  *
  * @deprecated None of the 2020 FRC controllers use this.
  */
-@Deprecated(since = "2020", forRemoval = true)
+@Deprecated
 public interface Controller {
   /**
    * Allows the control loop to run.

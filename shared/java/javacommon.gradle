@@ -88,6 +88,7 @@ if (project.hasProperty('onlylinuxathena') || project.hasProperty('onlylinuxrasp
 
 repositories {
     mavenCentral()
+    maven { url 'https://jitpack.io' }
     //maven.url "https://oss.sonatype.org/content/repositories/snapshots/"
 }
 
@@ -95,8 +96,10 @@ sourceSets {
     dev
 }
 
+sourceCompatibility = 11
+
 tasks.withType(JavaCompile).configureEach {
-    options.compilerArgs = ['--release', '11']
+    options.compilerArgs = ['--release', '8']
 }
 
 dependencies {
@@ -108,6 +111,8 @@ dependencies {
 
     //errorprone 'com.google.errorprone:error_prone_core:2.3.2-SNAPSHOT'
     //errorproneJavac 'com.google.errorprone:error_prone_core:2.3.1'
+
+        annotationProcessor 'com.github.bsideup.jabel:jabel-javac-plugin:0.2.0'
 }
 
 task run(type: JavaExec) {

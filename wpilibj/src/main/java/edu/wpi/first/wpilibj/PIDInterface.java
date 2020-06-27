@@ -7,7 +7,7 @@
 
 package edu.wpi.first.wpilibj;
 
-@Deprecated(since = "2020", forRemoval = true)
+@Deprecated
 @SuppressWarnings("SummaryJavadoc")
 public interface PIDInterface {
   @SuppressWarnings("ParameterName")

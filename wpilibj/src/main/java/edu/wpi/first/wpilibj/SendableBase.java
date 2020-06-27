@@ -14,7 +14,7 @@ import edu.wpi.first.wpilibj.smartdashboard.SendableRegistry;
  * functions for checking channels and error processing.
  * @deprecated Use Sendable and SendableRegistry
  */
-@Deprecated(since = "2020", forRemoval = true)
+@Deprecated
 public abstract class SendableBase implements Sendable, AutoCloseable {
   /**
    * Creates an instance of the sensor base.

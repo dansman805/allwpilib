@@ -20,7 +20,7 @@ import edu.wpi.first.wpilibj.smartdashboard.SendableRegistry;
  * @deprecated The only sensor this works with is no longer available and no teams use it according
  *             to FMS usage reporting.
  */
-@Deprecated(since = "2020", forRemoval = true)
+@Deprecated
 public class GearTooth extends Counter {
   private static final double kGearToothThreshold = 55e-6;
 

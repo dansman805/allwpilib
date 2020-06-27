@@ -13,7 +13,7 @@ package edu.wpi.first.wpilibj;
  * @deprecated Use DoubleConsumer and new PIDController class.
  */
 @FunctionalInterface
-@Deprecated(since = "2020", forRemoval = true)
+@Deprecated
 public interface PIDOutput {
   /**
    * Set the output to the value calculated by PIDController.

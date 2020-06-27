@@ -21,7 +21,7 @@ public interface Sendable {
    * @return Name
    * @deprecated Use SendableRegistry.getName()
    */
-  @Deprecated(since = "2020", forRemoval = true)
+  @Deprecated
   default String getName() {
     return SendableRegistry.getName(this);
   }
@@ -32,7 +32,7 @@ public interface Sendable {
    * @param name name
    * @deprecated Use SendableRegistry.setName()
    */
-  @Deprecated(since = "2020", forRemoval = true)
+  @Deprecated
   default void setName(String name) {
     SendableRegistry.setName(this, name);
   }
@@ -44,7 +44,7 @@ public interface Sendable {
    * @param name device name
    * @deprecated Use SendableRegistry.setName()
    */
-  @Deprecated(since = "2020", forRemoval = true)
+  @Deprecated
   default void setName(String subsystem, String name) {
     SendableRegistry.setName(this, subsystem, name);
   }
@@ -56,7 +56,7 @@ public interface Sendable {
    * @param channel    The channel number the device is plugged into
    * @deprecated Use SendableRegistry.setName()
    */
-  @Deprecated(since = "2020", forRemoval = true)
+  @Deprecated
   default void setName(String moduleType, int channel) {
     SendableRegistry.setName(this, moduleType, channel);
   }
@@ -69,7 +69,7 @@ public interface Sendable {
    * @param channel      The channel number the device is plugged into (usually PWM)
    * @deprecated Use SendableRegistry.setName()
    */
-  @Deprecated(since = "2020", forRemoval = true)
+  @Deprecated
   default void setName(String moduleType, int moduleNumber, int channel) {
     SendableRegistry.setName(this, moduleType, moduleNumber, channel);
   }
@@ -80,7 +80,7 @@ public interface Sendable {
    * @return Subsystem name
    * @deprecated Use SendableRegistry.getSubsystem()
    */
-  @Deprecated(since = "2020", forRemoval = true)
+  @Deprecated
   default String getSubsystem() {
     return SendableRegistry.getSubsystem(this);
   }
@@ -91,7 +91,7 @@ public interface Sendable {
    * @param subsystem subsystem name
    * @deprecated Use SendableRegistry.setSubsystem()
    */
-  @Deprecated(since = "2020", forRemoval = true)
+  @Deprecated
   default void setSubsystem(String subsystem) {
     SendableRegistry.setSubsystem(this, subsystem);
   }
@@ -102,7 +102,7 @@ public interface Sendable {
    * @param child child component
    * @deprecated Use SendableRegistry.addChild()
    */
-  @Deprecated(since = "2020", forRemoval = true)
+  @Deprecated
   default void addChild(Object child) {
     SendableRegistry.addChild(this, child);
   }
