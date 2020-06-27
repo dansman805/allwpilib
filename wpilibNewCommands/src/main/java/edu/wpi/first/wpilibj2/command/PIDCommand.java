@@ -7,7 +7,6 @@
 
 package edu.wpi.first.wpilibj2.command;
 
-import java.util.Set;
 import java.util.function.DoubleConsumer;
 import java.util.function.DoubleSupplier;
 
@@ -47,7 +46,7 @@ public class PIDCommand extends CommandBase {
     m_useOutput = useOutput;
     m_measurement = measurementSource;
     m_setpoint = setpointSource;
-    m_requirements.addAll(Set.of(requirements));
+    m_requirements.addAll(com.dansman805.util.CollectionUtil.setOf(requirements));
   }
 
   /**

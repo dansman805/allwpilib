@@ -345,7 +345,7 @@ public final class CommandScheduler implements Sendable, AutoCloseable {
    * @param subsystems the subsystem to un-register
    */
   public void unregisterSubsystem(Subsystem... subsystems) {
-    m_subsystems.keySet().removeAll(Set.of(subsystems));
+    m_subsystems.keySet().removeAll(com.dansman805.util.CollectionUtil.setOf(subsystems));
   }
 
   /**
@@ -392,7 +392,7 @@ public final class CommandScheduler implements Sendable, AutoCloseable {
    */
   public void cancel(Command... commands) {
     if (m_inRunLoop) {
-      m_toCancel.addAll(List.of(commands));
+      m_toCancel.addAll(com.dansman805.util.CollectionUtil.listOf(commands));
       return;
     }
 
@@ -446,7 +446,8 @@ public final class CommandScheduler implements Sendable, AutoCloseable {
    * @return whether the command is currently scheduled
    */
   public boolean isScheduled(Command... commands) {
-    return m_scheduledCommands.keySet().containsAll(Set.of(commands));
+    return m_scheduledCommands.keySet()
+      .containsAll(com.dansman805.util.CollectionUtil.setOf(commands));
   }
 
   /**

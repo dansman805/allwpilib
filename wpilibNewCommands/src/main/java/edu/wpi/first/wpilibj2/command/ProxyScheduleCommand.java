@@ -25,7 +25,7 @@ public class ProxyScheduleCommand extends CommandBase {
    * @param toSchedule the commands to schedule
    */
   public ProxyScheduleCommand(Command... toSchedule) {
-    m_toSchedule = Set.of(toSchedule);
+    m_toSchedule = com.dansman805.util.CollectionUtil.setOf(toSchedule);
   }
 
   @Override

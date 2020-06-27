@@ -22,7 +22,7 @@ public abstract class CommandGroupBase extends CommandBase implements Command {
       Collections.newSetFromMap(new WeakHashMap<>());
 
   static void registerGroupedCommands(Command... commands) {
-    m_groupedCommands.addAll(Set.of(commands));
+    m_groupedCommands.addAll(com.dansman805.util.CollectionUtil.setOf(commands));
   }
 
   /**
@@ -55,7 +55,7 @@ public abstract class CommandGroupBase extends CommandBase implements Command {
    * @param commands The commands to check
    */
   public static void requireUngrouped(Command... commands) {
-    requireUngrouped(Set.of(commands));
+    requireUngrouped(com.dansman805.util.CollectionUtil.setOf(commands));
   }
 
   /**

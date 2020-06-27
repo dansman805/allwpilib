@@ -7,7 +7,6 @@
 
 package edu.wpi.first.wpilibj2.command;
 
-import java.util.Set;
 import java.util.function.BiConsumer;
 import java.util.function.DoubleSupplier;
 import java.util.function.Supplier;
@@ -51,7 +50,7 @@ public class ProfiledPIDCommand extends CommandBase {
     m_useOutput = useOutput;
     m_measurement = measurementSource;
     m_goal = goalSource;
-    m_requirements.addAll(Set.of(requirements));
+    m_requirements.addAll(com.dansman805.util.CollectionUtil.setOf(requirements));
   }
 
   /**
@@ -76,7 +75,7 @@ public class ProfiledPIDCommand extends CommandBase {
     m_useOutput = useOutput;
     m_measurement = measurementSource;
     m_goal = () -> new State(goalSource.getAsDouble(), 0);
-    m_requirements.addAll(Set.of(requirements));
+    m_requirements.addAll(com.dansman805.util.CollectionUtil.setOf(requirements));
   }
 
   /**

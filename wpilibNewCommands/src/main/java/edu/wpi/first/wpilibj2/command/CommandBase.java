@@ -33,7 +33,7 @@ public abstract class CommandBase implements Sendable, Command {
    * @param requirements the requirements to add
    */
   public final void addRequirements(Subsystem... requirements) {
-    m_requirements.addAll(Set.of(requirements));
+    m_requirements.addAll(com.dansman805.util.CollectionUtil.setOf(requirements));
   }
 
   @Override
